@@ -1,3 +1,7 @@
+import player from "./player.js";
+
+window.addEventListener("load", player.start());
+
 const deadline = new Date("Oct 14, 2022 19:30:00").getTime();
             const x = setInterval(function() {
             const now = new Date().getTime();

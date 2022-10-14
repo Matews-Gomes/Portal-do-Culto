@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/site.css">
     <title>Portal do cultio - Home</title>
 </head>
 <body>
@@ -35,7 +35,34 @@
         <div class="jumbotron jumbotron-fluid py-4">
             <div class="container mt-4 pt-4">
                 <h1 class="display-3">Dia da Libertação</h1>
-                <p class="lead">O grande dia está chegando prepara-te igreja, vai ser só benças e golorias!</p>
+                <p class="lead">O grande dia está chegando prepara-te mamadios irmãos, vai ser só benças e golorias!</p>                
+                <div class="d-flex align-items-center p-3 my-3 text-white bg-secondary rounded shadow-sm">                  
+                    <img class="me-3 band-image" alt="" width="100" height="100">
+                    <div class="lh-1"> 
+                        <h1 class="h6 mb-1 text-white lh-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cassette-fill" viewBox="0 0 16 16">
+                                <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h.191l1.862-3.724A.5.5 0 0 1 4 10h8a.5.5 0 0 1 .447.276L14.31 14h.191a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13ZM4 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm8 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM6 6a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2H7a1 1 0 0 1-1-1Z"/>
+                                <path d="m13.191 14-1.5-3H4.309l-1.5 3h10.382Z"/>
+                            </svg>
+                            As Mais Tocadas
+                        </h1>                       
+                        <a class="btn btn-dark btn-sm rounded my-2" id="play" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                            </svg>
+                        </a>
+                        <div class="row my-1">
+                            <div class="col s2" id="current-duration">00:00</div>
+                            <div class="col s6 range-field">
+                                <input type="range" min="0" max="0" id="seekbar" step="1"/>
+                            </div>
+                            <div class="col s2" id="total-duration">00:00</div>
+                        </div>
+                        <h1 class="h6 mb-1 text-white lh-1 title-music"></h1>                            
+                        <small class="artist"></small>                                               
+                    </div>                                                     
+                </div>
                 <hr class="my-2">
                 <h2 class="display-2 text-center my-2 py-2">Contagem regresiva para o cultio</h2>
                 <h2 class="display-4 text-center my-2 py-2"> Aguardem o Pastior está chegando...!</h2>
@@ -58,7 +85,7 @@
         </div>
     </footer>
 
-    <script src="./js/site.js"></script>  
+    <script src="./js/site.js" type="module"></script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,10 +1,24 @@
 export default [
 
     {
-        title: "Angels Or Devils",
-        artist: "Dishwalla",
-        cover:  "dishwalla.jpg",
-        file: "Angels Or Devils.mp3"   
+        title: "Dare You To Move",
+        artist: "Switchfoot",
+        cover:  "Switchfoot.jpg",
+        file: "Dare You To Move.mp3"  
+    },
+
+    {
+        title: "You Found Me",
+        artist: "The Fray",
+        cover:  "The Fray.jpg",
+        file: "You Found Me.mp3"  
+    },
+
+    {
+        title: "Whatever It Takes",
+        artist: "Lifehouse",
+        cover:  "lifehouse2.jpg",
+        file: "Whatever It Takes.mp3"   
     },
 
     {
@@ -15,10 +29,24 @@ export default [
     },
 
     {
+        title: "Angels Or Devils",
+        artist: "Dishwalla",
+        cover:  "dishwalla.jpg",
+        file: "Angels Or Devils.mp3"   
+    },
+
+    {
         title: "Better Luck Next Time",
         artist: "Lifehouse",
         cover:  "lifehouse.jpg",
         file: "Better Luck Next Time.mp3"
+    },
+
+    {
+        title: "Blue Sky",
+        artist: "Hale",
+        cover:  "Hale.jpg",
+        file: "Blue Sky.mp3"   
     },
 
     {
@@ -29,10 +57,10 @@ export default [
     },
 
     {
-        title: "Blue Sky",
-        artist: "Hale",
-        cover:  "Hale.jpg",
-        file: "Blue Sky.mp3"   
+        title: "Every Little Thing",
+        artist: "Lifehouse",
+        cover:  "lifehouse.jpg",
+        file: "Every Little Thing.mp3"   
     },
 
     {
@@ -50,20 +78,6 @@ export default [
     },
 
     {
-        title: "Come Back Down",
-        artist: "Lifehouse",
-        cover:  "lifehouse.jpg",
-        file: "Come Back Down.mp3"   
-    },
-
-    {
-        title: "Every Little Thing",
-        artist: "Lifehouse",
-        cover:  "lifehouse.jpg",
-        file: "Every Little Thing.mp3"   
-    },
-
-    {
         title: "Somewhere in the Middle",
         artist: "Dishwalla",
         cover:  "dishwalla.jpg",
@@ -71,17 +85,17 @@ export default [
     },
 
     {
+        title: "Come Back Down",
+        artist: "Lifehouse",
+        cover:  "lifehouse.jpg",
+        file: "Come Back Down.mp3"   
+    },
+
+    {
         title: "The Day You Said Goodnight",
         artist: "Hale",
         cover:  "Hale.jpg",
         file: "The Day You Said Goodnight.mp3"   
-    },
-
-    {
-        title: "Whatever It Takes",
-        artist: "Lifehouse",
-        cover:  "lifehouse2.jpg",
-        file: "Whatever It Takes.mp3"   
     },
 
     {

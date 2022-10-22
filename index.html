@@ -7,81 +7,101 @@
     <link rel="stylesheet" href="./css/site.css">
     <title>Portal do cultio - Home</title>
 </head>
-<body>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Portal do cultio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="./galeria.html">Galeria</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Restrito</a>
-                </li>
-            </ul>
-        </div>
-        </div>
-    </nav>
+<body class="bg-light">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Portal do cultio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Restrito</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
 
+        
     <main class="container py-4">
-        <div class="jumbotron jumbotron-fluid py-4">
+        <div class="jumbotron jumbotron-fluid">
             <div class="container mt-4 pt-4">
                 <h1 class="display-3">Dia da Libertação</h1>
-                <p class="lead">O grande dia está chegando prepara-te mamadios irmãos, vai ser só benças e golorias!</p>                
-                <div class="d-flex align-items-center p-3 my-3 text-white bg-secondary rounded shadow-sm">                  
-                    <img class="me-3 band-image" alt="" width="100" height="100">
-                    <div class="lh-1"> 
-                        <h1 class="h6 mb-1 text-white lh-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cassette-fill" viewBox="0 0 16 16">
-                                <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h.191l1.862-3.724A.5.5 0 0 1 4 10h8a.5.5 0 0 1 .447.276L14.31 14h.191a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13ZM4 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm8 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM6 6a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2H7a1 1 0 0 1-1-1Z"/>
-                                <path d="m13.191 14-1.5-3H4.309l-1.5 3h10.382Z"/>
-                            </svg>
-                            As Mais Tocadas
-                        </h1>                       
-                        <a class="btn btn-dark btn-sm rounded my-2" id="play" href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
-                            </svg>
-                        </a>
-                        <div class="row my-1">
-                            <div class="col s2" id="current-duration">00:00</div>
-                            <div class="col s6 range-field">
-                                <input type="range" min="0" max="0" id="seekbar" step="1"/>
-                            </div>
-                            <div class="col s2" id="total-duration">00:00</div>
+                <p class="lead">O grande dia está chegando prepara-te mamadios irmãos, vai ser só benças e golorias!</p>                              
+                <div class="card text-white bg-dark rounded shadow-sm">
+                    <div class="row g-0">
+                        <div class="col-md-2 px-2 py-3">
+                            <img class="img-fluid rounded-start band-image" width="300" height="300">
                         </div>
-                        <h1 class="h6 mb-1 text-white lh-1 title-music"></h1>                            
-                        <small class="artist"></small>                                               
-                    </div>                                                     
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fs-4">
+                                    <i class="fa-solid fa-headphones"></i>
+                                    As Mais Tocadas
+                                </h5>
+                                <div class="d-flex justify-content-start">
+                                    <a role="button" class="text-white mx-2">
+                                        <i class="large material-icons py-1" id="playpause">play_arrow</i>
+                                    </a>
+                                    <a role="button" class="px-3 mx-3 text-white" id="backward">
+                                        <i class="large material-icons py-1">skip_previous</i>
+                                    </a>
+                                    <a role="button" class="text-white" id="forward">
+                                        <i class="large material-icons py-1">skip_next</i>
+                                    </a>
+                                </div>
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-1"  id="current-duration">
+                                            00:00
+                                        </div>
+                                        <div class="col-md-2 my-1">
+                                            <input type="range" min="0" max="0" id="seekbar"/>
+                                        </div>
+                                        <div class="col-md-1" id="total-duration">
+                                            00:00
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a role="button" class="my-1 text-white">
+                                                <i class="material-icons" id="volIcon">volume_up</i>
+                                            </a>
+                                        </div>                             
+                                    </div>
+                                </div>
+                                <h6 class="card-text title-music"></h6>                            
+                                <small class="artist"></small>   
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
                 <hr class="my-2">
                 <h2 class="display-2 text-center my-2 py-2">Contagem regresiva para o cultio</h2>
                 <h2 class="display-4 text-center my-2 py-2"> Aguardem o Pastior está chegando...!</h2>
                 <p class="lead text-center">                   
-                    Golorias e biborias serão dadas, labasubias e suricantas...,
+                    Golorias e biborias serão dadas, labasubias e suricantas,<br>
                     trazei todos os dizmos e ofertas para compartilhar-mos do tapete e 
-                    da palavra hooooou golorias!!!
+                    da palavra hooooou labasubias golorias serão dadas!!!
                 </p>           
-                <div class="display-3 text-center text-danger mt-4" id="timer"></div>            
-            </div>
-        </div>
+                <div class="display-3 text-center text-danger mt-4" id="timer"></div>               
     </main>
 
     <footer class="text-muted py-5">
         <div class="container">
             <p class="float-end mb-1">
-                <a href="#">Voltar ao topo</a>
+                <a class="text-decoration-none" href="#">Voltar ao topo</a>
             </p>
-            <p class="mb-1">Igreja Penteicostal &copy; Aqueles que tem pentei nas costas!</p>
+            <p class="mb-1 text-center">Igreja Penteicostal &copy; Aqueles que tem pentei nas costas!</p>
         </div>
     </footer>
 

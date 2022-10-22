@@ -1,5 +1,5 @@
 import audios from "./data.js";
-import { path } from "./utils.js";
+import { path, secondsToMinutes } from "./utils.js";
 import elements from "./playerElements.js"
 
 export default {
@@ -9,29 +9,49 @@ export default {
     isPlaying: false,
 
     start() { 
-        elements.get.call(this);
-        elements
-        this.actions();       
+        elements.get.call(this);           
         this.update();
-        this.audio.onended = () => this.next();
-    },
-
-
-    actions(){
-        this.playPause.onclick = () => this.tooglePLayPause();
-        this.seekbar.oninput = () => this.setSeek(this.seekbar.value);
-        this.seekbar.onchange = () => this.setSeek(this.seekbar.value);
-        //this.seekbar.max = this.audio.duration;
     },
 
     play(){
         this.isPlaying = true;
         this.audio.play();
+        this.playPause.innerText = "pause"
+
     },
 
     pause(){
         this.isPlaying = false;
         this.audio.pause();
+        this.playPause.innerText = "play_arrow"
+    },
+
+    stop(){
+        this.isPlaying = false;
+        this.audio.pause();
+    },
+
+    previousPlay(){
+        if(this.currentPlaying > 0){
+            this.stop();
+            this.currentPlaying--
+            this.update();
+            this.audio.play();
+        }else{
+            this.currentPlaying = this.audioData.length -1;
+        }
+    },
+
+    nextPlay(){
+        if(this.currentPlaying < this.audioData.length -1){
+            this.stop();
+            this.currentPlaying++
+            this.update();
+            this.audio.play();
+        }
+        else{
+            this.currentPlaying = 0;
+        }        
     },
 
     tooglePLayPause(){
@@ -42,26 +62,38 @@ export default {
         }
     },
 
+    toogleMute(){
+        this.audio.muted = !this.audio.muted;
+        this.volicon.innerText = this.audio.muted ? "volume_off" : "volume_up";
+    },
+
     setSeek(value){
-        this.audioData.audio.currentTime = value;
+        this.audio.currentTime = value;
     },
 
         next() {
             this.currentPlaying++
             if (this.currentPlaying == this.audioData.length) this.restart();
             this.update();
-            this.audio.play();
+            this.play();
+        },
+
+        timeUpdate(){
+            this.currentDuration.innerText = secondsToMinutes(this.audio.currentTime);
+            this.seekbar.value = this.audio.currentTime;
         },
 
         update(){
             this.currentAudio = this.audioData[this.currentPlaying];
             this.cover.style.background = `url('${path(
-                this.currentAudio.cover
+                this.currentAudio?.cover
             )}') no-repeat center center / cover`;
-            this.title.innerText = this.currentAudio.title;
-            this.artist.innerText = this.currentAudio.artist;
-            elements.createAudioElement.call(this, path(this.currentAudio.file));
-            this.seekbar.max = this.audio.duration;
+            this.title.innerText = this.currentAudio?.title;
+            this.artist.innerText = this.currentAudio?.artist;
+            elements.createAudioElement.call(this, path(this.currentAudio?.file));
+            this.audio.onloadeddata = () =>{
+                elements.actions.call(this);    
+            }
         },
 
         restart(){

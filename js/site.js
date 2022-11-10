@@ -2,7 +2,7 @@ import player from "./player.js";
 
 window.addEventListener("load", player.start());
 
-const deadline = new Date("Nov 11, 2022 19:30:00").getTime();
+const deadline = new Date("Nov 25, 2022 19:00:00").getTime();
             const x = setInterval(function() {
             const now = new Date().getTime();
             const t = deadline - now;
@@ -14,6 +14,6 @@ const deadline = new Date("Nov 11, 2022 19:30:00").getTime();
             + hours + " horas : " + minutes + " minutos : " + seconds + " segundos ";
                 if (t < 0) {
                     clearInterval(x);
-                    document.getElementById("timer").innerHTML = "É tempo de golorificar aguardem o próximo cultio";
+                    document.getElementById("timer").innerHTML = "O cultio foi adiado aguardem a próxima contagem";
                 }
             }, 1000);

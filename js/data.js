@@ -1,10 +1,24 @@
 export default [
 
     {
+        title: "Beautiful James",
+        artist: "Placebo",
+        cover:  "placebo never let me go.jpg",
+        file: "Beautiful James.mp3"   
+    },
+
+    {
         title: "Dare You To Move",
         artist: "Switchfoot",
         cover:  "Switchfoot.jpg",
         file: "Dare You To Move.mp3"  
+    },
+
+    {
+        title: "Drag",
+        artist: "Placebo",
+        cover:  "placebo meds.jpg",
+        file: "Drag.mp3"   
     },
 
     {
@@ -19,6 +33,13 @@ export default [
         artist: "Lifehouse",
         cover:  "lifehouse2.jpg",
         file: "Whatever It Takes.mp3"   
+    },
+
+    {
+        title: "The Bitter End",
+        artist: "Placebo",
+        cover:  "placebo sleeping with ghosts.jpg",
+        file: "The Bitter End.mp3"   
     },
 
     {
@@ -54,13 +75,6 @@ export default [
         artist: "Lifehouse",
         cover:  "lifehouse.jpg",
         file: "Blind.mp3"   
-    },
-
-    {
-        title: "Every Little Thing",
-        artist: "Lifehouse",
-        cover:  "lifehouse.jpg",
-        file: "Every Little Thing.mp3"   
     },
 
     {
@@ -103,5 +117,14 @@ export default [
         artist: "Lifehouse",
         cover:  "lifehouse.jpg",
         file: "You And Me.mp3" 
-    }
+    },
+
+    
+    {
+        title: "Every Little Thing",
+        artist: "Lifehouse",
+        cover:  "lifehouse.jpg",
+        file: "Every Little Thing.mp3"   
+    },
+
 ];

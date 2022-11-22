@@ -1,6 +1,27 @@
 export default [
     
     {
+        title:  "30 Seconds to Mars",
+        artist: "The Kill",
+        cover:  "mars.png",
+        file:   "30 Seconds to Mars.mp3"   
+    },
+
+    {
+        title:  "Helena",
+        artist: "My Chemical Romance",
+        cover:  "chermical.jpg",
+        file:   "Helena.mp3"   
+    },
+
+    {
+        title:  "The Diary of Jane",
+        artist: "Breaking Benjamin",
+        cover:  "phobia.jpg",
+        file:   "The Diary of Jane.mp3"   
+    },
+
+    {
         title:  "Crush Us All",
         artist: "Seaweed",
         cover:  "seaweed.jpg",
@@ -12,6 +33,13 @@ export default [
         artist: "Blink 182",
         cover:  "blink 182.jpg",
         file:   "I Miss You.mp3"   
+    },
+
+    {
+        title:  "Breath",
+        artist: "Breaking Benjamin",
+        cover:  "phobia.jpg",
+        file:   "Breath.mp3"   
     },
 
     {

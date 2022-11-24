@@ -186,7 +186,7 @@ export default [
     {
         title:  "Whatever It Takes",
         artist: "Lifehouse",
-        cover:  "lifehouse2.jpg",
+        cover:  "who we are.jpg",
         file:   "Whatever It Takes.mp3"   
     },
 
@@ -242,7 +242,7 @@ export default [
     {
         title:  "Broken",
         artist: "Lifehouse",
-        cover:  "lifehouse2.jpg",
+        cover:  "who we are.jpg",
         file:   "Broken.mp3"   
     },
 

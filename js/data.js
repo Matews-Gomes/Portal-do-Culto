@@ -1,6 +1,13 @@
 export default [
     
     {
+        title:  "Run",
+        artist: "Snow Patrol",
+        cover:  "Snow Patrol - Run.jpeg",
+        file:   "Snow Patrol - Run.mp3"   
+    },
+
+    {
         title:  "30 Seconds to Mars",
         artist: "The Kill",
         cover:  "mars.png",

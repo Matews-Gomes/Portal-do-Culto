@@ -9,7 +9,7 @@ export default {
     isPlaying: false,
 
     start() { 
-        elements.get.call(this);           
+        elements.get.call(this);        
         this.update();
     },
 
@@ -92,12 +92,17 @@ export default {
             this.artist.innerText = this.currentAudio?.artist;
             elements.createAudioElement.call(this, path(this.currentAudio?.file));
             this.audio.onloadeddata = () =>{
-                elements.actions.call(this);    
+                elements.actions.call(this);
             }
         },
 
         restart(){
             this.currentPlaying = 0;
             this.update();
+        },
+
+        getRandom() {
+            let musicIndex = Math.floor((Math.random() * audios.length) + 1);
+            start(musicIndex);
         }
 };

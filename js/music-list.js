@@ -1,0 +1,465 @@
+let allMusic = [
+    
+    {
+        name: "Pull the Plug",
+        artist: "Death",
+        img: "Death Leprosy",
+        src: "PullthePlug"  
+    },
+
+    {
+        name: "Zombie Ritual",
+        artist: "Death",
+        img: "Death Zombie Ritual",
+        src: "ZombieRitual"  
+    },
+
+    {
+        name: "A Tout Le Monde",
+        artist: "Megadeath",
+        img: "Megadeath A Tout Le Monde",
+        src: "AToutLeMonde"  
+    },
+
+    {
+        name: "Angry Again",
+        artist: "Megadeth",
+        img: "Megadeth",
+        src: "AngryAgain"  
+    },
+
+    {
+        name: "Tornado Of Souls",
+        artist: "Megadeth",
+        img: "Megadeath Rust in peace",
+        src: "TornadoOfSouls"  
+    },
+
+    {
+        name: "Fight Fire With Fire",
+        artist: "Metallica",
+        img: "Metallica Ride The Lightning",
+        src: "FightFireWithFire"  
+    },
+
+    {
+        name: "For Whom The Bell Tolls",
+        artist: "Metallica",
+        img: "Metallica Ride The Lightning",
+        src: "ForWhomTheBellTolls"  
+    },
+
+    {
+        name: "Ride The Lightning",
+        artist: "Metallica",
+        img: "Metallica Ride The Lightning",
+        src: "RideTheLightning"  
+    },
+
+    {
+        name: "Doomsday Celebration",
+        artist: "Morbid Angel",
+        img: "Morbid Angel - Fall From Grace",
+        src: "DoomsdayCelebration"  
+    },
+
+    {
+        name: "Fall From Grace",
+        artist: "Morbid Angel",
+        img: "Morbid Angel",
+        src: "FallFromGrace"  
+    },
+
+    {
+        name: "Summoning Redemption",
+        artist: "Morbid Angel",
+        img: "Morbid Angel",
+        src: "SummoningRedemption"  
+    },
+
+    {
+        name: "Harvester of Sorrow",
+        artist: "Metallica",
+        img: "Metallica",
+        src: "FightFireWithFire"  
+    },
+
+    {
+        name: "Revolution Is My Name",
+        artist: "Pantera",
+        img: "Pantera",
+        src: "RevolutionIsMyName"  
+    },
+
+    {
+        name: "Walk",
+        artist: "Pantera",
+        img: "PanteraWalk",
+        src: "Walk"  
+    },
+
+    {
+        name: "Drag the Waters",
+        artist: "Pantera",
+        img: "Pantera Drag the Waters",
+        src: "DragtheWaters"  
+    },
+
+    {
+        name: "Fgmenth, Thy Gift",
+        artist: "Rotting Christ",
+        img: "Rotting Christ Fgmenth, Thy Gif",
+        src: "FgmenthThyGift"  
+    },
+
+    {
+        name: "His Sleeping Majesty",
+        artist: "Rotting Christ",
+        img: "Rotting Christ Fgmenth, Thy Gif",
+        src: "HisSleepingMajesty"  
+    },
+
+    {
+        name: "Ostia and Genocide",
+        artist: "Scrupulous",
+        img: "Scrupulous",
+        src: "OstiaandGenocide"  
+    },
+
+    {
+        name:  "South Of Heaven",
+        artist: "Slayer",
+        img:  "Slayer",
+        src:   "SouthOfHeaven"   
+    },
+
+    {
+        name: "Dead Embryonic Cells",
+        artist: "Sepultura",
+        img: "Septultura",
+        src: "DeadEmbryonicCells"  
+    },
+
+    {
+        name: "Meaningless Movements",
+        artist: "Sepultura ",
+        img: "Septultura",
+        src: "MeaninglessMovements"  
+    },
+
+    {
+        name: "Agent Orange",
+        artist: "Sodom",
+        img: "Sodon Agente Orenge",
+        src: "AgentOrange"  
+    },
+
+    {
+        name: "Napalm in the Morning",
+        artist: "Sodom",
+        img: "sodom",
+        src: "NapalmintheMorning"  
+    },
+
+    {
+        name: "Everybody's Changing",
+        artist: "Keane",
+        img: "keanehope",
+        src: "EverybodysChanging"  
+    },
+
+    {
+        name: "Somewhere Only We Know",
+        artist: "Keane",
+        img: "keane",
+        src: "SomewhereOnlyWeKnow"  
+    },
+
+    {
+        name: "Run",
+        artist: "Snow Patrol",
+        img: "snow patrol final straw",
+        src: "Run"  
+    },
+
+    {
+        name:  "30 Seconds to Mars",
+        artist: "The Kill",
+        img:  "mars",
+        src:   "SecondstoMars"   
+    },
+
+    {
+        name:  "Helena",
+        artist: "My Chemical Romance",
+        img:  "chermical",
+        src:   "Helena"   
+    },
+
+    {
+        name:  "The Diary of Jane",
+        artist: "Breaking Benjamin",
+        img:  "phobia",
+        src:   "TheDiaryofJane"   
+    },
+
+    {
+        name:  "Crush Us All",
+        artist: "Seaweed",
+        img:  "seaweed",
+        src:   "CrushUsAll"   
+    },
+    
+    {
+        name:  "I Miss You",
+        artist: "Blink 182",
+        img:  "blink 182",
+        src:   "IMissYou"   
+    },
+
+    {
+        name:  "Breath",
+        artist: "Breaking Benjamin",
+        img:  "phobia",
+        src:   "Breath"   
+    },
+
+    {
+        name:  "Mr. Brightside",
+        artist: "The Killers",
+        img:  "mr brigthside",
+        src:   "MrBrightside"   
+    },
+
+    {
+        name:  "Song 2",
+        artist: "Blur",
+        img:  "girls and boys",
+        src:   "Song2"   
+    },
+
+
+    {
+        name:  "Buddy Holly",
+        artist: "Weezer",
+        img:  "buddy holly",
+        src:   "BuddyHolly"   
+    },
+
+    {
+        name:  "The Middle",
+        artist: "Jimmy Eat World",
+        img:  "the middle",
+        src:   "TheMiddle"   
+    },
+
+    {
+        name:  "Everlong",
+        artist: "Foo Fighters",
+        img:  "foo figthers",
+        src:   "Everlong"   
+    },
+    
+    {
+        name:  "Pork And Beans",
+        artist: "Weezer",
+        img:  "weezer",
+        src:   "PorkAndBeans"   
+    },
+
+    {
+        name:  "Animal I Have Become",
+        artist: "Three Days Grace",
+        img:  "Three Days Grace",
+        src:   "AnimalIHaveBecome"   
+    },
+
+    {
+        name:  "Sex On Fire",
+        artist: "Kings of Leon",
+        img:  "sex on fire",
+        src:   "SexOnFire"   
+    },
+
+    {
+        name:  "Digital Bath",
+        artist: "Deftones",
+        img:  "digitalbaths",
+        src:   "DigitalBath"   
+    },
+
+    {
+        name:  "Resistance",
+        artist: "Muse",
+        img:  "resistence",
+        src:   "Resistance"   
+    },
+
+    {
+        name:  "Girls and Boys",
+        artist: "Blur",
+        img:  "girls and boys",
+        src:   "GirlsandBoys"   
+    },
+
+    {
+        name:  "Run For Cover",
+        artist: "The Killers",
+        img:  "run for cover",
+        src:   "RunForCover"   
+    },
+
+    {
+        name:  "Time is Running Out",
+        artist: "Muse",
+        img:  "time is running out",
+        src:   "TimeisRunningOut"   
+    },
+
+    {
+        name:  "Special K",
+        artist: "Placebo",
+        img:  "Special K",
+        src:   "SpecialK"   
+    },
+
+    {
+        name: "Uprising",
+        artist: "Muse",
+        img:  "resistence",
+        src: "Uprising"   
+    },
+
+    {
+        name:  "Read My Mind",
+        artist: "The Killers",
+        img:  "Killer ready my mind",
+        src:   "ReadMyMind"   
+    },
+
+    {
+        name:  "Beautiful James",
+        artist: "Placebo",
+        img:  "placebo never let me go",
+        src:   "BeautifulJames"   
+    },
+
+    {
+        name: "Dare You To Move",
+        artist: "Switchfoot",
+        img:  "Switchfoot",
+        src: "DareYouToMove"  
+    },
+
+    {
+        name:  "Drag",
+        artist: "Placebo",
+        img:  "placebo meds",
+        src:   "Drag"   
+    },
+
+    {
+        name:  "You Found Me",
+        artist: "The Fray",
+        img:  "The Fray",
+        src:   "YouFoundMe"  
+    },
+
+    {
+        name:  "Whatever It Takes",
+        artist: "Lifehouse",
+        img:  "lifehouse2",
+        src:   "WhateverItTakes"   
+    },
+
+    {
+        name:  "The Bitter End",
+        artist: "Placebo",
+        img:  "Sleeping with ghosts",
+        src:   "TheBitterEnd"   
+    },
+
+    {
+        name:  "Come Back Down",
+        artist: "Lifehouse",
+        img:  "lifehouse",
+        src:   "ComeBackDown"
+    },
+
+    {
+        name:  "Angels Or Devils",
+        artist: "Dishwalla",
+        img:  "opaline",
+        src:   "AngelsOrDevils"   
+    },
+
+    {
+        name:  "Better Luck Next Time",
+        artist: "Lifehouse",
+        img:  "lifehouse",
+        src:   "BetterLuckNextTime"
+    },
+
+    {
+        name:  "Blue Sky",
+        artist: "Hale",
+        img:  "Hale",
+        src:   "BlueSky"   
+    },
+
+    {
+        name:  "Blind",
+        artist: "Lifehouse",
+        img:  "lifehouse",
+        src:   "Blind"   
+    },
+
+    {
+        name:  "Breathing",
+        artist: "Lifehouse",
+        img:  "lifehouse1",
+        src:   "Breathing"   
+    },
+
+    {
+        name:  "Broken",
+        artist: "Lifehouse",
+        img:  "lifehouse2",
+        src:   "Broken"   
+    },
+
+    {
+        name:  "Somewhere in the Middle",
+        artist: "Dishwalla",
+        img:  "opaline",
+        src:   "SomewhereintheMiddle"   
+    },
+
+    {
+        name:  "Come Back Down",
+        artist: "Lifehouse",
+        img:  "lifehouse",
+        src:   "ComeBackDown"   
+    },
+
+    {
+        name:  "The Day You Said Goodnight",
+        artist: "Hale",
+        img:  "Hale",
+        src:   "TheDayYouSaidGoodnight"   
+    },
+
+    {
+        name:  "You And Me",
+        artist: "Lifehouse",
+        img:  "lifehouse",
+        src:   "YouAndMe" 
+    },
+
+    {
+        name:  "Every Little Thing",
+        artist: "Lifehouse",
+        img:  "lifehouse",
+        src:   "Everylittlething"   
+    },
+]

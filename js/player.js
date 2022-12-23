@@ -3,10 +3,11 @@ import { path, secondsToMinutes } from "./utils.js";
 import elements from "./playerElements.js"
 
 export default {
-    audioData: audios,
+    audioData:  audios,
     currentAudio: {},
     currentPlaying: 0,
     isPlaying: false,
+    
 
     start() { 
         elements.get.call(this);        
@@ -74,8 +75,8 @@ export default {
         next() {
             this.currentPlaying++
             if (this.currentPlaying == this.audioData.length) this.restart();
-            this.update();
             this.play();
+            this.playPause.innerText = "pause"
         },
 
         timeUpdate(){
@@ -93,16 +94,12 @@ export default {
             elements.createAudioElement.call(this, path(this.currentAudio?.file));
             this.audio.onloadeddata = () =>{
                 elements.actions.call(this);
+                
             }
         },
 
         restart(){
-            this.currentPlaying = 0;
+            this.currentPlaying = Math.floor((Math.random() * audios.length) + 1)
             this.update();
         },
-
-        getRandom() {
-            let musicIndex = Math.floor((Math.random() * audios.length) + 1);
-            start(musicIndex);
-        }
 };

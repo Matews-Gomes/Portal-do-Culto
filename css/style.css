@@ -425,4 +425,7 @@ ul li.playing {
     color: #000;
     opacity: var(--light-black);
     cursor: pointer;
+    transform: scale(1.1);
 }
+
+

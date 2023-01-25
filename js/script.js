@@ -15,6 +15,11 @@ hideMusicButton = musicList.querySelector("#close");
 
 let musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
 
+let mensageIn = 'Carnaval é na igreja venham participar do Carnacultio'+
+' iremos trasnbordar os vasos de azeite vai ser só labasusbias... faltam:'+ '</br>'
+let mensageNow = 'O Cultio já comecou apressa-te...' + '<br/>' + 'é chegada a hora!'
+let mensageOut = 'É tempo de golorificar aguardem!' + '<br/>' + 'O próximo cultio vem ai';
+
 window.addEventListener("load", ()=> {
     loadMusic(musicIndex); 
     playingNow();
@@ -91,7 +96,6 @@ mainAudio.addEventListener("timeupdate", (e)=> {
     if(currentSeconds < 10) {
         currentSeconds = `0${currentSeconds}`;
     }
-
     // Exibição dos minutos e segundos atuais da música
     musicCurrentTime.innerText = `${currentMinutes}:${currentSeconds}`;
 });
@@ -215,7 +219,7 @@ darkMode.onclick = () => {
     body.classList.toggle('is-dark');
 }
 
-const deadline = new Date("Jan 06, 2023 19:00:00").getTime();
+            const deadline = new Date("Feb 19, 2023 13:00:00").getTime();
             const x = setInterval(function() {
             const now = new Date().getTime();
             const t = deadline - now;
@@ -223,15 +227,27 @@ const deadline = new Date("Jan 06, 2023 19:00:00").getTime();
             const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((t % (1000 * 60)) / 1000);
-            document.getElementById("timer").innerHTML = 'Venham participar do primeiro cultio' +
-            ' do ano onde derrotaremos o inimigo e encheremos o vaso dos azeite faltam:' + '</br>' +
-            days + " dias " 
+            document.getElementById("timer").innerHTML = mensageIn
+            + days + " dias " 
             + hours + " horas : " + minutes + " minutos : " + seconds + " segundos ";
                 if (t < 0) {
                     clearInterval(x);
-                    document.getElementById("timer").innerHTML = "É tempo de golorificar aguardem o próximo cultio";
+                    document.getElementById("timer").innerHTML = mensageNow;
+                    TerminarCultio();                                                        
                 }
             }, 1000);
+
+            function TerminarCultio() {
+                const lineUp = new Date("Feb 19, 2023 21:00:00").getTime();
+                const y = setInterval(function() {
+                    const now = new Date().getTime();
+                    const time = lineUp - now;
+                    if(time < 0){
+                    clearInterval(y);
+                    document.getElementById("timer").innerHTML = mensageOut;
+                }
+                },1000);
+            } 
 
 new Glider(document.querySelector(".js-carousel--simple"), {
         slidesToShow: 2,
@@ -261,3 +277,11 @@ new Glider(document.querySelector(".js-carousel--simple"), {
         },
         ],
     });
+
+$('.card').magnificPopup({
+    delegate: 'a', 
+    type: 'image',
+    gallery:{enabled:true}
+});
+
+

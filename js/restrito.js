@@ -102,7 +102,9 @@ function entrar(){
                 msgError.setAttribute('style', 'display: block')
             } else {
                 if (user.value == userValid.user && password.value == userValid.password) {
-                    window.location.href = 'http://127.0.0.1:5501/home.html'
+                    window.location.href = 'https://portaldocultio.netlify.app/home.html'
+                    let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2);
+                    localStorage.setItem('token', token);
                 } else {
                     msgError.innerHTML = "Usuário ou senha incorretos!"
                     msgError.setAttribute('style', 'display: block')

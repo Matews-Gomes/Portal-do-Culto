@@ -1,3 +1,7 @@
+if(localStorage.getItem('token') == null){
+    alert('Voçe precisa estar logado para acessar esta pagina!')
+    window.location.href = 'https://portaldocultio.netlify.app/'
+}
 
 const wrapper = document.querySelector(".wrapper"),
 musicImage = wrapper.querySelector(".img-area img"),
@@ -284,4 +288,7 @@ $('.card').magnificPopup({
     gallery:{enabled:true}
 });
 
-
+function sair(){
+    localStorage.removeItem('token');
+    window.location.href = 'https://portaldocultio.netlify.app/'
+}

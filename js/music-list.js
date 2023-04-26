@@ -1,5 +1,6 @@
 let allMusic = [
 
+    //Louvorzinhos
     {
         name: "Everybody's Changing",
         artist: "Keane",
@@ -311,6 +312,8 @@ let allMusic = [
         src:    "TheDayYouSaidGoodnight"   
     },
 
+    //Punks
+
     {
         name:  "Living Hell",
         artist: "Misfits",
@@ -339,6 +342,7 @@ let allMusic = [
         src:    "AmericanPsycho"   
     },
 
+    //Metal
     {
         name: "Practice What You Preach",
         artist: "Testament",
@@ -395,20 +399,34 @@ let allMusic = [
         src: "RideTheLightning"  
     },
 
-    
-    {
-        name: "Ostia and Genocide",
-        artist: "Scrupulous",
-        img: "Scrupulous",
-        src: "OstiaandGenocide"  
-    },
-
     {
         name: "Harvester of Sorrow",
         artist: "Metallica",
         img: "Metallica",
         src: "HarvesterofSorrow"  
     },
+
+    //Deth
+    {
+        name: "Between The Hammers of Doom",
+        artist: "Nahum",
+        img: "nahum",
+        src: "BetweenTheHammersofDoom"  
+    },
+
+    {
+        name: "Within Destruction",
+        artist: "Nahum",
+        img: "nahum",
+        src: "WithinDestruction"  
+    },
+
+    {
+        name: "Ostia and Genocide",
+        artist: "Scrupulous",
+        img: "Scrupulous",
+        src: "OstiaandGenocide"  
+    },    
 
     {
         name: "Blood Of Kingu",
@@ -494,6 +512,8 @@ let allMusic = [
         src: "SummoningRedemption"  
     },
 
+    //Trash
+    
     {
         name: "Revolution Is My Name",
         artist: "Pantera",
@@ -515,62 +535,7 @@ let allMusic = [
         src: "DragtheWaters"  
     },
 
-    {
-        name: "The Laws Of Scourge",
-        artist: "Sarcófago",
-        img: "Sarcofago",
-        src: "Thelawsofscourge"  
-    },
-
-    {
-        name: "Midnight Queen",
-        artist: "Sarcófago",
-        img: "Sarcofago",
-        src: "MidnightQueen"  
-    },
-
-    {
-        name: "INRI",
-        artist: "Sarcófago",
-        img: "inri",
-        src: "INRI"  
-    },
-
-    {
-        name: "Nightmare",
-        artist: "Sarcófago",
-        img: "inri",
-        src: "Nightmare"  
-    },
-
-    {
-        name: "TheBlackVomit",
-        artist: "Sarcófago",
-        img: "inri",
-        src: "TheBlackVomit"  
-    },
-
-    {
-        name: "Baphomet's Throne",
-        artist: "Samael",
-        img: "samael",
-        src: "BaphometsThrone"  
-    },
-
-    {
-        name: "Fgmenth, Thy Gift",
-        artist: "Rotting Christ",
-        img: "Rotting Christ Fgmenth, Thy Gif",
-        src: "FgmenthThyGift"  
-    },
-
-    {
-        name: "His Sleeping Majesty",
-        artist: "Rotting Christ",
-        img: "Rotting Christ Fgmenth, Thy Gif",
-        src: "HisSleepingMajesty"  
-    },
-
+    
     {
         name:  "South Of Heaven",
         artist: "Slayer",
@@ -613,5 +578,85 @@ let allMusic = [
         img: "sodom",
         src: "NapalmintheMorning"  
     },
+
+    //Black
+
+    {
+        name: "All That is Evil",
+        artist: "Deicide",
+        img: "deicide",
+        src: "AllThatIsEvil"  
+    },
+
+    {
+        name: "God kill",
+        artist: "Deicide",
+        img: "deicidee",
+        src: "Godkill"  
+    },
+
+    {
+        name: "In The Minds of Evil",
+        artist: "Deicide",
+        img: "deicidee",
+        src: "InTheMindsofEvil"  
+    },
+
+    {
+        name: "The Laws Of Scourge",
+        artist: "Sarcófago",
+        img: "Sarcofago",
+        src: "Thelawsofscourge"  
+    },
+
+    {
+        name: "Midnight Queen",
+        artist: "Sarcófago",
+        img: "Sarcofago",
+        src: "MidnightQueen"  
+    },
+
+    {
+        name: "INRI",
+        artist: "Sarcófago",
+        img: "inri",
+        src: "INRI"  
+    },
+
+    {
+        name: "Nightmare",
+        artist: "Sarcófago",
+        img: "inri",
+        src: "Nightmare"  
+    },
+
+    {
+        name: "The Black Vomit",
+        artist: "Sarcófago",
+        img: "inri",
+        src: "TheBlackVomit"  
+    },
+
+    {
+        name: "Baphomet's Throne",
+        artist: "Samael",
+        img: "samael",
+        src: "BaphometsThrone"  
+    },
+
+    {
+        name: "Fgmenth, Thy Gift",
+        artist: "Rotting Christ",
+        img: "Rotting Christ Fgmenth, Thy Gif",
+        src: "FgmenthThyGift"  
+    },
+
+    {
+        name: "His Sleeping Majesty",
+        artist: "Rotting Christ",
+        img: "Rotting Christ Fgmenth, Thy Gif",
+        src: "HisSleepingMajesty"  
+    },
+
 
 ]

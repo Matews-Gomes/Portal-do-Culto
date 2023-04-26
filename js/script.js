@@ -19,8 +19,10 @@ hideMusicButton = musicList.querySelector("#close");
 
 let musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
 
-let mensageIn = 'Carnaval é na igreja venham participar do Carnacultio'+
-' iremos trasnbordar os vasos de azeite vai ser só labasusbias... faltam:'+ '</br>'
+let mensageIn = 'Já era tempo de golorificar o tempo foi grande mais quem espera no sinhô sempre alcança'+
+' É chegada a hora prepara-te igreja, iremos trasnbordar os vasos dozazeites vai ser sobiborias,' + 
+'trazei os seus dizmos e ofertas para cultiuarmos juntos em uma so unção!' + '</br>' + 
+'faltam:'+ '</br>'
 let mensageNow = 'O Cultio já comecou apressa-te...' + '<br/>' + 'é chegada a hora!'
 let mensageOut = 'É tempo de golorificar aguardem!' + '<br/>' + 'O próximo cultio vem ai';
 
@@ -100,6 +102,7 @@ mainAudio.addEventListener("timeupdate", (e)=> {
     if(currentSeconds < 10) {
         currentSeconds = `0${currentSeconds}`;
     }
+    
     // Exibição dos minutos e segundos atuais da música
     musicCurrentTime.innerText = `${currentMinutes}:${currentSeconds}`;
 });
@@ -223,7 +226,7 @@ darkMode.onclick = () => {
     body.classList.toggle('is-dark');
 }
 
-            const deadline = new Date("Feb 19, 2023 13:00:00").getTime();
+            const deadline = new Date("May 05, 2023 19:00:00").getTime();
             const x = setInterval(function() {
             const now = new Date().getTime();
             const t = deadline - now;
@@ -242,7 +245,7 @@ darkMode.onclick = () => {
             }, 1000);
 
             function TerminarCultio() {
-                const lineUp = new Date("Feb 19, 2023 21:00:00").getTime();
+                const lineUp = new Date("May 06, 2023 07:00:00").getTime();
                 const y = setInterval(function() {
                     const now = new Date().getTime();
                     const time = lineUp - now;

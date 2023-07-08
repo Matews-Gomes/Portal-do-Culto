@@ -342,6 +342,57 @@ let allMusic = [
         src:    "AmericanPsycho"   
     },
 
+   //Hadcores
+
+    {
+        name:   "Terra do Ódio",
+        artist: "Jacau",
+        img:    "terradoodio",
+        src:    "Terradoodio"   
+    },
+
+    {
+        name:   "Amem, Aleluia, Assalto, Armação",
+        artist: "Jacau",
+        img:    "amem",
+        src:    "AmemAleluiaAssaltoArmacao"   
+    },
+
+    {
+        name:   "A Serviço Do Estado",
+        artist: "Jacau",
+        img:    "Jacau",
+        src:    "AServiçodoEstado"   
+    },
+    
+    {
+        name:   "Limpeza Social",
+        artist: "Jacau",
+        img:    "miseria",
+        src:    "LimpezaSocial"   
+    },
+
+    {
+        name:   "Escravidão",
+        artist: "Jacau",
+        img:    "Jacau",
+        src:    "Escravidao"   
+    },
+
+    {
+        name:   "O Jogo",
+        artist: "Jacau",
+        img:    "jogo",
+        src:    "Ojogo"   
+    },
+
+    {
+        name:   "O Homem De Bem",
+        artist: "Jacau",
+        img:    "Jacau",
+        src:    "OHomemdebem"   
+    },
+
     //Metal
     {
         name: "Practice What You Preach",

@@ -19,9 +19,9 @@ hideMusicButton = musicList.querySelector("#close");
 
 let musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
 
-let mensageIn = 'Já era tempo de golorificar o tempo foi grande mais quem espera no sinhô sempre alcança'+
-' É chegada a hora prepara-te igreja, iremos trasnbordar os vasos dozazeites vai ser sobiborias,' + 
-'trazei os seus dizmos e ofertas para cultiuarmos juntos em uma so unção!' + '</br>' + 
+let mensageIn = 'Benças e golorias meus mamadios irmãos, o pastior convida tudo que tenha as gargantias de oro' + '</br>' + 
+'para lovarmos e engrandiaçermos o nome do sinhô em mais um cultio que será um momentio de multipricação para darmos golorias ' + '</br>' +
+'e compartilharmos da palavra onde pisaremos na cabeça do inimigo e faremos cair por terra o opressor!' + '</br>' + 
 'faltam:'+ '</br>'
 let mensageNow = 'O Cultio já comecou apressa-te...' + '<br/>' + 'é chegada a hora!'
 let mensageOut = 'É tempo de golorificar aguardem!' + '<br/>' + 'O próximo cultio vem ai';
@@ -226,7 +226,7 @@ darkMode.onclick = () => {
     body.classList.toggle('is-dark');
 }
 
-            const deadline = new Date("May 05, 2023 19:00:00").getTime();
+            const deadline = new Date("Jul 21, 2023 19:00:00").getTime();
             const x = setInterval(function() {
             const now = new Date().getTime();
             const t = deadline - now;
@@ -245,7 +245,7 @@ darkMode.onclick = () => {
             }, 1000);
 
             function TerminarCultio() {
-                const lineUp = new Date("May 06, 2023 07:00:00").getTime();
+                const lineUp = new Date("Jul 22, 2023 07:00:00").getTime();
                 const y = setInterval(function() {
                     const now = new Date().getTime();
                     const time = lineUp - now;
@@ -293,5 +293,6 @@ $('.card').magnificPopup({
 
 function sair(){
     localStorage.removeItem('token');
-    window.location.href = 'https://portaldocultio.netlify.app/'
+    window.location.href = 'http://127.0.0.1:5500/index.html'
+    //window.location.href = 'https://portaldocultio.netlify.app/'
 }

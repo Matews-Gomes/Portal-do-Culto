@@ -100,8 +100,8 @@ function entrar() {
         msgError.setAttribute('style', 'display: block');
     } else {
         if (userValid) {
-            window.location.href = 'http://127.0.0.1:5500/home.html';
-            //window.location.href = 'https://portaldocultio.netlify.app/home.html';
+            //window.location.href = 'http://127.0.0.1:5500/home.html';
+            window.location.href = 'https://portaldocultio.netlify.app/home.html';
             let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2);
             localStorage.setItem('token', token);
             

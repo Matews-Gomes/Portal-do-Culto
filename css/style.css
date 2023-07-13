@@ -428,4 +428,38 @@ ul li.playing {
     transform: scale(1.1);
 }
 
+.carousel {
+    margin-bottom: 4rem;
+}
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+.carousel-item {
+    height: 32rem;
+}
+
+.carousel-item {
+    height: 0;
+    padding-bottom: 56.25%; /* Proporção de aspecto 16:9 */
+    position: relative;
+}
+
+.carousel-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-image-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+
 

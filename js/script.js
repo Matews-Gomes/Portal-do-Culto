@@ -22,7 +22,7 @@ let musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
 let mensageIn = 'Benças e golorias meus mamadios irmãos, o pastior convida tudo que tenha as gargantias de oro' + '</br>' + 
 'para lovarmos e engrandiaçermos o nome do sinhô em mais um cultio que será um momentio de multipricação para darmos golorias ' + '</br>' +
 'e compartilharmos da palavra onde pisaremos na cabeça do inimigo e faremos cair por terra o opressor!' + '</br>' + 
-'faltam:'+ '</br>'
+'faltam...'+ '</br>'
 let mensageNow = 'O Cultio já comecou apressa-te...' + '<br/>' + 'é chegada a hora!'
 let mensageOut = 'É tempo de golorificar aguardem!' + '<br/>' + 'O próximo cultio vem ai';
 
@@ -235,8 +235,8 @@ darkMode.onclick = () => {
             const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((t % (1000 * 60)) / 1000);
             document.getElementById("timer").innerHTML = mensageIn
-            + days + " dias " 
-            + hours + " horas : " + minutes + " minutos : " + seconds + " segundos ";
+            + days + " dias, " 
+            + hours + " horas, " + minutes + " minutos e" + seconds + " segundos ";
                 if (t < 0) {
                     clearInterval(x);
                     document.getElementById("timer").innerHTML = mensageNow;

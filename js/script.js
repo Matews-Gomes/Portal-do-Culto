@@ -3,7 +3,8 @@ if(localStorage.getItem('token') == null){
     window.location.href = 'https://portaldocultio.netlify.app/'
 }
 
-const wrapper = document.querySelector(".wrapper"),
+const wrapper = document.querySelector(".wrapper");
+const ulTag = wrapper.querySelector("ul");
 musicImage = wrapper.querySelector(".img-area img"),
 musicName = wrapper.querySelector(".song-details .name"),
 musicArtist = wrapper.querySelector(".song-details .artist"),
@@ -18,17 +19,21 @@ showMoreButton = wrapper.querySelector("#more-music"),
 hideMusicButton = musicList.querySelector("#close");
 
 let musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
+let currentPlayingIndex = -1;
 
 let mensageIn = 'Benças e golorias meus mamadios irmãos, o pastior convida tudo que tenha as gargantias de oro' + '</br>' + 
-'para lovarmos e engrandiaçermos o nome do sinhô em mais um cultio que será um momentio de multipricação para darmos golorias ' + '</br>' +
-'e compartilharmos da palavra onde pisaremos na cabeça do inimigo e faremos cair por terra o opressor!' + '</br>' + 
+'para lovarmos e engrandiçermos o nome do sinhô em mais um cultio que será um momentio de multipricação e ' + '</br>' +
+'compartilhamento da palavra onde pisaremos na cabeça do inimigo e faremos cair por terra o opressor!' + '</br>' + 
 'faltam...'+ '</br>'
 let mensageNow = 'O Cultio já comecou apressa-te...' + '<br/>' + 'é chegada a hora!'
 let mensageOut = 'É tempo de golorificar aguardem!' + '<br/>' + 'O próximo cultio vem ai';
 
 window.addEventListener("load", ()=> {
     loadMusic(musicIndex); 
-    playingNow();
+    setupClickEvents();
+    mainAudio.onplay = () => {
+        playingNow();
+    };
 });
 
 function loadMusic(indexNumb) {
@@ -42,6 +47,27 @@ function playMusic() {
     wrapper.classList.add("paused");
     playPauseButton.innerHTML = "<i class='bx bx-pause'></i>";
     mainAudio.play();
+
+    mainAudio.onplay = () => {
+        for (let j = 0; j < allLiTags.length; j++) {
+            if (allLiTags[j].getAttribute("li-index") == musicIndex) {
+                allLiTags[j].classList.add("playing");
+                const audioTag = allLiTags[j].querySelector(".audio-duration");
+                audioTag.innerText = "Tocando Agora";
+            }
+        }
+    };
+    currentPlayingIndex = musicIndex;
+    mainAudio.onpause = () => {
+        for (let j = 0; j < allLiTags.length; j++) {
+            if (allLiTags[j].getAttribute("li-index") == musicIndex) {
+                allLiTags[j].classList.remove("playing");
+                const audioTag = allLiTags[j].querySelector(".audio-duration");
+                const adDuration = audioTag.getAttribute("t-duration");
+                audioTag.innerText = adDuration;
+            }
+        }
+    };
 }
 
 function pauseMusic() {
@@ -159,6 +185,11 @@ mainAudio.addEventListener("ended", ()=> {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const musicList = document.querySelector(".music-list");
+    musicList.classList.add("show");
+});
+
 showMoreButton.addEventListener("click", ()=> {
     musicList.classList.toggle("show");
 });
@@ -167,32 +198,82 @@ hideMusicButton.addEventListener("click", ()=> {
     showMoreButton.click();
 });
 
-const ulTag = wrapper.querySelector("ul");
-
 for (let i = 0; i < allMusic.length; i++) {
-    let liTag = `<li li-index="${i + 1}">
+    let liTag = `<button class="show-lyrics" data-li-index="${i}">Ver Letra</button>
+                <li li-index="${i + 1}">
                     <div class="row">
                         <span>${allMusic[i].name}</span>
-                        <p>${allMusic[i].artist}</p>
+                        <p>${allMusic[i].artist}</p>                        
                     </div>
                     <audio class="${allMusic[i].src}" src="music/${allMusic[i].src}.mp3"></audio>
-                    <span id="${allMusic[i].src}" class="audio-duration">3:40</span>
+                    <span id="${allMusic[i].src}" class="audio-duration">3:40</span>                    
                 </li>`;
-        ulTag.insertAdjacentHTML("beforeend", liTag);
-        
-        let liAudioDuration = ulTag.querySelector(`#${allMusic[i].src}`);
-        let liAudioTag = ulTag.querySelector(`.${allMusic[i].src}`);
-        liAudioTag.addEventListener("loadeddata", ()=> {
-            let audioDuration = liAudioTag.duration;
-            let totalMinutes = Math.floor(audioDuration / 60); 
-            let totalSeconds = Math.floor(audioDuration % 60); 
-            if(totalSeconds < 10) { 
-                totalSeconds = `0${totalSeconds}`;
-            }
-            liAudioDuration.innerText = `${totalMinutes}:${totalSeconds}`;
-            liAudioDuration.setAttribute("t-duration", `${totalMinutes}:${totalSeconds}`);
-        });
+    ulTag.insertAdjacentHTML("beforeend", liTag);
+    
+    let liAudioDuration = ulTag.querySelector(`#${allMusic[i].src}`);
+    let liAudioTag = ulTag.querySelector(`.${allMusic[i].src}`);
+    liAudioTag.addEventListener("loadeddata", ()=> {
+        let audioDuration = liAudioTag.duration;
+        let totalMinutes = Math.floor(audioDuration / 60); 
+        let totalSeconds = Math.floor(audioDuration % 60); 
+        if(totalSeconds < 10) { 
+            totalSeconds = `0${totalSeconds}`;
+        }
+        liAudioDuration.innerText = `${totalMinutes}:${totalSeconds}`;
+        liAudioDuration.setAttribute("t-duration", `${totalMinutes}:${totalSeconds}`);
+    });
 } 
+
+const lyricsContainer = document.querySelector(".lyrics-container");
+function toggleLyricsDisplay(musicIndex) {
+    const musicTitle = document.getElementById("music-title");
+    const lyricsElement = lyricsContainer.querySelector(".lyrics");
+
+    if (lyricsContainer.style.display === "none") {
+        ulTag.style.display = "none";
+        lyricsContainer.style.display = "block";
+
+        if (musicIndex >= 0 && musicIndex < allMusic.length) {
+            const selectedMusic = allMusic[musicIndex];
+            lyricsElement.textContent = selectedMusic.lyrics;
+            musicTitle.textContent = selectedMusic.name;
+        } else {
+            lyricsElement.innerHTML = "Nenhuma música tocando.";
+        }
+    } else {
+        ulTag.style.display = "block";
+        lyricsContainer.style.display = "none";
+        lyricsElement.textContent = "";
+    }
+}
+
+
+const backToListButton = document.getElementById("back-to-list");
+backToListButton.addEventListener("click", () => {
+    toggleLyricsDisplay(-1); 
+});
+
+const showLyricsButtons = document.querySelectorAll(".show-lyrics");
+showLyricsButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault(); // Impedir que o botão recarregue a página
+        const musicIndex = parseInt(button.getAttribute("data-li-index"));
+        toggleLyricsDisplay(musicIndex);
+    });
+});
+
+function setupClickEvents() {
+    const allLiTags = ulTag.querySelectorAll("li");
+    for (let j = 0; j < allLiTags.length; j++) {
+        allLiTags[j].addEventListener("click", () => {
+            const liIndex = allLiTags[j].getAttribute("li-index");
+            musicIndex = liIndex;
+            loadMusic(musicIndex);
+            playMusic();
+            playingNow();
+        });
+    }
+}
 
 const allLiTags = ulTag.querySelectorAll("li");
 function playingNow() {
@@ -205,9 +286,25 @@ function playingNow() {
         }
         if(allLiTags[j].getAttribute("li-index") == musicIndex) {
             allLiTags[j].classList.add("playing");
-            audioTag.innerText = "Tocando";
+            allLiTags[j].classList.add("highlighted");
+            audioTag.innerText = "Tocando Agora";
         }
+
+        allLiTags[j].addEventListener("click", () => {
+            const liIndex = allLiTags[j].getAttribute("li-index");
+            musicIndex = liIndex;
+            loadMusic(musicIndex);
+            playMusic();
+            playingNow();
+        });
+
         allLiTags[j].setAttribute("onclick", "clicked(this)");
+
+        const container = document.querySelector(".music-list-container");
+        const currentlyPlaying = container.querySelector(".highlighted");
+        if (currentlyPlaying) {
+            currentlyPlaying.scrollIntoView({ behavior: "smooth" });
+        }
     }
 }
 
@@ -219,6 +316,11 @@ function clicked(element) {
     playingNow();
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const body = document.querySelector('.page');
+    body.classList.add('is-dark');
+});
+
 const darkMode = document.querySelector('.dark-mode'),
     body = document.querySelector('.page');
 
@@ -226,7 +328,7 @@ darkMode.onclick = () => {
     body.classList.toggle('is-dark');
 }
 
-            const deadline = new Date("Jul 21, 2023 19:00:00").getTime();
+            const deadline = new Date("Nov 03, 2023 19:00:00").getTime();
             const x = setInterval(function() {
             const now = new Date().getTime();
             const t = deadline - now;
@@ -245,7 +347,7 @@ darkMode.onclick = () => {
             }, 1000);
 
             function TerminarCultio() {
-                const lineUp = new Date("Jul 22, 2023 07:00:00").getTime();
+                const lineUp = new Date("Nov 04, 2023 07:00:00").getTime();
                 const y = setInterval(function() {
                     const now = new Date().getTime();
                     const time = lineUp - now;

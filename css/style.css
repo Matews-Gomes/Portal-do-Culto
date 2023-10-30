@@ -227,6 +227,11 @@ body {
     transition: all 0.14s ease;
 }
 
+.music-list-container {
+    max-height: 300px; 
+    overflow-y: auto;
+}
+
 /* Classe Utilizada no JS */
 .music-list.show {
     bottom: 0;
@@ -240,6 +245,46 @@ body {
     font-size: 19px;
     color: var(--light-black);
 }
+
+.show-lyrics {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    width: 100px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.show-lyrics:hover {
+    background-color: #2980b9;
+}
+
+.lyrics-container {
+    display: none;
+}
+
+.lyrics-container pre {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    white-space: pre-line;
+    margin-left: 0;
+}
+
+.back-button {
+    background-color: #3498db;
+    color: #fff; 
+    padding: 5px 20px;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+}
+
 
 .header .row i {
     cursor: default;

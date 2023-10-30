@@ -44,7 +44,7 @@
 
     <main class="container py-4" id="Home">
         <div class="jumbotron jumbotron-fluid">
-            <h1 class="display-3 dark-white text-center mt-4 pt-4">Portal do cultio homenageia o dia mundial do rock</h1>
+            <h1 class="display-3 dark-white text-center mt-4 pt-4">Visitantes Sejam Bem vindos!</h1>
             <hr class="my-2">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -55,27 +55,27 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="/photos/diamundialdorock.png" class="d-block w-100" alt="...">
+                        <img src="/photos/banner.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <p class="fs-4 text-secondary">Em 13 de julho de 1985, houve um grande evento chamado Live Aid, um show simultâneo em Londres (Inglaterra) e na Filadélfia (Estados Unidos).</p>
+                            <p class="fs-4 text-secondary"></p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="/photos/rockbanner.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <p class="fs-4 text-secondary">O objetivo principal era o fim da fome na Etiópia. O evento chamou a atenção por contar com a presença de muitos artistas famosos na época.</p>
+                            <p class="fs-4 text-secondary"></p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="/photos/rock13.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <p class="fs-4 text-secondary"> Entre os participantes, estavam The Who, Status Quo, Led Zeppelin, Dire Straits, Madonna, Queen, Joan Baez, David Bowie, BB King, Mick Jagger, Sting, Scorpions, U2, Paul McCartney, Phil Collins (que tocou nos dois lugares), Eric Clapton e Black Sabbath.</p>
+                            <p class="fs-4 text-secondary"></p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="/photos/kiss.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">                            
-                            <p class="fs-4 text-secondary">Apesar de se chamar "Dia Mundial do Rock", a data só é comemorada no Brasil. Ela começou a ser celebrada em meados dos anos 1990.</p>
+                            <p class="fs-4 text-secondary"></p>
                         </div>
                     </div>
                 </div>
@@ -89,17 +89,10 @@
                 </button>
             </div>
             <hr class="my-2">
-            <h1 class="display-4 dark-white text-center">Portal do cultio</h1>      
+            <h1 class="display-4 dark-white text-center">Agrada-te nas prezença dos teus zirmãos</h1>      
             <p class="lead dark-white text-center">
-                    O dia 13 de julho é reconhecido no Brasil como o Dia Mundial do Rock. 
-                    A data celebra anualmente o rock e foi escolhida em homenagem ao Live Aid, 
-                    megaevento que aconteceu nesse dia em 1985. 
-                    A celebração é uma referência a um desejo expressado por Phil Collins, 
-                    participante do evento, que gostaria que aquele fosse considerado o "dia mundial do rock". 
-                    O evento também ficou conhecido por contar com grandes artistas do gênero, como Queen, 
-                    Mick Jagger, Keith Richards, Ronnie Wood, Elton John, Paul McCartney, David Bowie, U2, 
-                    Kiss. Apesar de se chamar "Dia Mundial do Rock", a data só é comemorada no Brasil. Ela começou a ser celebrada em meados dos anos 1990.
-                    O grande dia para o cultio está chegando prepara-te mamadios irmãos, vai ser benças e golorias!
+                Venha participar do grande levantamento de unhão e avivamento das renovação da igreja cronta ozinimigo!
+                marque em sua agendia o grande dia onde derrotaremos o malzo e engrandeceremos o olero para enchermos os pote dos azeite!
             </p>
             <hr class="my-2">
             <h2 class="display-2 text-center my-2 py-2 dark-white">Contagem regresiva para o cultio</h2>
@@ -111,6 +104,8 @@
                 Escute os lovoures e corinhos de adoração que mais tocam no cultio!
             </p>
             <hr class="my-2">
+
+            <!--****Player e lista de musicas****-->
             <div class="wrapper">
                 <div class="top-bar">
                     <i class="material-icons">arrow_drop_down</i>
@@ -144,7 +139,7 @@
                     <i id="next" class='bx bx-skip-next'></i>
                     <i id="more-music" class='bx bxs-playlist'></i>
                 </div>
-                <div class="music-list" style="position: relative; top: 10px;">
+                <div class="music-list mt-4" style="position: relative; top: 10px;" >
                     <div class="header">
                         <div class="row">
                             <i id="more-music" class='bx bxs-playlist'></i>
@@ -152,433 +147,438 @@
                         </div>
                         <i id="close" class='bx bx-x'></i>
                     </div>
-                    <ul></ul>
-                </div>
-            </div>
-                <hr class="my-4">
-                <h1 class="fw-light dark-white text-center">Galeria de fotos</h1>
-                <section class="text-center container" id="Galeria">
-                    <div class="row py-lg-5">
-                        <div class="col-lg-6 col-md-8 mx-auto">
-                            <p class="lead text-muted dark-white">
-                                Momentos únicos registrados no ambito do cultio,
-                                momentos de confraternização entre os mamadios irmãos
-                                que estarão guardados para memória do cultio.
-                            </p>
-                        </div>
+                    <div class="music-list-container">
+                        <ul>
+                            <!-- Seus itens de música aqui -->
+                        </ul>
+                    </div>  
+                    <div class="lyrics-container" style="display: none;">
+                        <h2 id="music-title"><!--Titulo da Musica--></h2>
+                        <pre class="lyrics"><!--Letra da Musica--></pre>
+                        <button class="back-button mb-4" id="back-to-list">Voltar à Lista</button>
+                    </div>                   
+                </div>                               
+            </div>          
+            <hr class="my-4">
+            <h1 class="fw-light dark-white text-center">Galeria de fotos</h1>
+            <section class="text-center container" id="Galeria">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <p class="lead text-muted dark-white">
+                            Momentos únicos registrados no ambito do cultio,
+                            momentos de confraternização entre os mamadios irmãos
+                            que estarão guardados para memória do cultio.
+                        </p>
                     </div>
-                    <article class="c-carousel c-carousel--simple">
-                        <div class="c-carousel__slides js-carousel--simple">
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-26.jpeg"><img src="./photos/img-26.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2023</small>
-                                        </div>
+                </div>
+                <article class="c-carousel c-carousel--simple">
+                    <div class="c-carousel__slides js-carousel--simple">
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-26.jpeg"><img src="./photos/img-26.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2023</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-27.jpeg"><img src="./photos/img-27.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2023</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-27.jpeg"><img src="./photos/img-27.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2023</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-28.jpeg"><img src="./photos/img-28.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2023</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-28.jpeg"><img src="./photos/img-28.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2023</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-29.jpeg"><img src="./photos/img-29.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2023</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-29.jpeg"><img src="./photos/img-29.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2023</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-30.jpeg"><img src="./photos/img-30.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2023</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-30.jpeg"><img src="./photos/img-30.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2023</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-31.jpeg"><img src="./photos/img-31.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2023</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-31.jpeg"><img src="./photos/img-31.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2023</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-32.jpeg"><img src="./photos/img-32.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2023</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-32.jpeg"><img src="./photos/img-32.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2023</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-33.jpeg"><img src="./photos/img-33.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2023</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-33.jpeg"><img src="./photos/img-33.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2023</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-34.jpeg"><img src="./photos/img-34.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2023</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-34.jpeg"><img src="./photos/img-34.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2023</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-05.jpeg"><img src="./photos/img-05.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-05.jpeg"><img src="./photos/img-05.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-10.jpeg"><img src="./photos/img-10.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-10.jpeg"><img src="./photos/img-10.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-12.jpeg"><img src="./photos/img-12.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-12.jpeg"><img src="./photos/img-12.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-11.jpeg"><img src="./photos/img-11.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-11.jpeg"><img src="./photos/img-11.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-06.jpeg"><img src="./photos/img-06.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-06.jpeg"><img src="./photos/img-06.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-15.jpeg"><img src="./photos/img-15.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-15.jpeg"><img src="./photos/img-15.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-07.jpeg"><img src="./photos/img-07.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-07.jpeg"><img src="./photos/img-07.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-08.jpeg"><img src="./photos/img-08.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-08.jpeg"><img src="./photos/img-08.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-13.jpeg"><img src="./photos/img-13.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-13.jpeg"><img src="./photos/img-13.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-14.jpeg"><img src="./photos/img-14.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-14.jpeg"><img src="./photos/img-14.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-16.jpeg"><img src="./photos/img-16.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-16.jpeg"><img src="./photos/img-16.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-17.jpeg"><img src="./photos/img-17.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-17.jpeg"><img src="./photos/img-17.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-18.jpeg"><img src="./photos/img-18.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-18.jpeg"><img src="./photos/img-18.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-20.jpeg"><img src="./photos/img-20.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-20.jpeg"><img src="./photos/img-20.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-21.jpeg"><img src="./photos/img-21.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-21.jpeg"><img src="./photos/img-21.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-23.jpeg"><img src="./photos/img-23.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-23.jpeg"><img src="./photos/img-23.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-24.jpeg"><img src="./photos/img-24.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-24.jpeg"><img src="./photos/img-24.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-25.jpeg"><img src="./photos/img-25.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2022</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-25.jpeg"><img src="./photos/img-25.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2022</small>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-01.jpeg"><img src="./photos/img-01.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2021</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-01.jpeg"><img src="./photos/img-01.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2021</small>
                                     </div>
                                 </div>
-                            </article>
-
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-02.jpeg"><img src="./photos/img-02.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2021</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-02.jpeg"><img src="./photos/img-02.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2021</small>
                                     </div>
                                 </div>
-                            </article>
-
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-03.jpeg"><img src="./photos/img-03.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2021</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-03.jpeg"><img src="./photos/img-03.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2021</small>
                                     </div>
                                 </div>
-                            </article>
-
-                            <article class="c-carousel__slide py-2 px-1">
-                                <div class="card shadow-md">
-                                    <a href="./photos/img-04.jpeg"><img src="./photos/img-04.jpeg" alt=""></a>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                        </p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group"></div>
-                                            <small class="text-muted">2021</small>
-                                        </div>
+                            </div>
+                        </article>
+                        <article class="c-carousel__slide py-2 px-1">
+                            <div class="card shadow-md">
+                                <a href="./photos/img-04.jpeg"><img src="./photos/img-04.jpeg" alt=""></a>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group"></div>
+                                        <small class="text-muted">2021</small>
                                     </div>
                                 </div>
-                            </article>
-                        </div>
-                    </article>
-                </section>
-            </div>
+                            </div>
+                        </article>
+                    </div>
+                </article>
+            </section>
         </div>
     </main>
     <!-- Footer -->

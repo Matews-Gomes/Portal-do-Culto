@@ -32,7 +32,7 @@ let currentPlayingIndex = -1;
 let titleMensage = 'Convite para o aniversário do Pastior!'
 let mensageIn = 'Benças e golorias meus mamadios irmãos, o pastior convida tudo que tenha as gargantias de oro,' + '</br>' + 
 'para lovarmos e engrandiçermos no cultio de encerramento do ano que será um momentio de compartilhamento e ' +
-'multipricação da palavra, na ocasião estaremos comemorando o aniversário do pastior' + 
+'multipricação da palavra, na ocasião estaremos comemorando o aniversário do pastior ' + 
 'tragam seus dizmos e as suas zofertas para que labaxurias sejam dadas, fiquem de olho na contagem!' 
 
 let mensageNow = 'O Cultio já comecou apressa-te...' + '<br/>' + 'é chegada a hora!'

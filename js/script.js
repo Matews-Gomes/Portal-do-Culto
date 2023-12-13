@@ -3,6 +3,7 @@ if(localStorage.getItem('token') == null){
     window.location.href = 'https://portaldocultio.netlify.app/'
 }
 
+const navbarLinks = document.querySelectorAll('.nav-link');
 const wrapper = document.querySelector(".wrapper");
 const ulTag = wrapper.querySelector("ul");
 musicImage = wrapper.querySelector(".img-area img"),
@@ -18,15 +19,25 @@ musicList = wrapper.querySelector(".music-list"),
 showMoreButton = wrapper.querySelector("#more-music"),
 hideMusicButton = musicList.querySelector("#close");
 
+navbarLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        navbarLinks.forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
 let musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
 let currentPlayingIndex = -1;
 
-let mensageIn = 'Benças e golorias meus mamadios irmãos, o pastior convida tudo que tenha as gargantias de oro' + '</br>' + 
-'para lovarmos e engrandiçermos o nome do sinhô em mais um cultio que será um momentio de multipricação e ' + '</br>' +
-'compartilhamento da palavra onde pisaremos na cabeça do inimigo e faremos cair por terra o opressor!' + '</br>' + 
-'faltam...'+ '</br>'
+let titleMensage = 'Convite para o aniversário do Pastior!'
+let mensageIn = 'Benças e golorias meus mamadios irmãos, o pastior convida tudo que tenha as gargantias de oro,' + '</br>' + 
+'para lovarmos e engrandiçermos no cultio de encerramento do ano que será um momentio de compartilhamento e ' +
+'multipricação da palavra, na ocasião estaremos comemorando o aniversário do pastior' + 
+'tragam seus dizmos e as suas zofertas para que labaxurias sejam dadas, fiquem de olho na contagem!' 
+
 let mensageNow = 'O Cultio já comecou apressa-te...' + '<br/>' + 'é chegada a hora!'
-let mensageOut = 'É tempo de golorificar aguardem!' + '<br/>' + 'O próximo cultio vem ai';
+let mensageOut = 'É tempo de golorificar aguardem' + '<br/>' + 'O próximo cultio vem ai!';
+
 
 window.addEventListener("load", ()=> {
     loadMusic(musicIndex); 
@@ -199,15 +210,18 @@ hideMusicButton.addEventListener("click", ()=> {
 });
 
 for (let i = 0; i < allMusic.length; i++) {
-    let liTag = `<button class="show-lyrics" data-li-index="${i}">Ver Letra</button>
-                <li li-index="${i + 1}">
-                    <div class="row">
-                        <span>${allMusic[i].name}</span>
-                        <p>${allMusic[i].artist}</p>                        
-                    </div>
-                    <audio class="${allMusic[i].src}" src="music/${allMusic[i].src}.mp3"></audio>
-                    <span id="${allMusic[i].src}" class="audio-duration">3:40</span>                    
-                </li>`;
+    let liTag = `<button class="show-lyrics btn btn-success"  data-li-index="${i}">
+                        Cantar Junto!
+                    </button>
+                    <li li-index="${i + 1}">
+                        <div class="row">
+                            <span>${allMusic[i].name}</span>
+                            <p>${allMusic[i].artist}</p>                                                  
+                        </div>
+                        <audio class="${allMusic[i].src}" src="music/${allMusic[i].src}.mp3"></audio>
+                        <span id="${allMusic[i].src}" class="audio-duration">3:40</span>                    
+                    </li>
+                `;
     ulTag.insertAdjacentHTML("beforeend", liTag);
     
     let liAudioDuration = ulTag.querySelector(`#${allMusic[i].src}`);
@@ -328,7 +342,7 @@ darkMode.onclick = () => {
     body.classList.toggle('is-dark');
 }
 
-            const deadline = new Date("Nov 03, 2023 19:00:00").getTime();
+            const deadline = new Date("Dec 22, 2023 19:30:00").getTime();
             const x = setInterval(function() {
             const now = new Date().getTime();
             const t = deadline - now;
@@ -336,8 +350,9 @@ darkMode.onclick = () => {
             const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((t % (1000 * 60)) / 1000);
-            document.getElementById("timer").innerHTML = mensageIn
-            + days + " dias " 
+            document.getElementById("title").innerHTML = titleMensage;
+            document.getElementById("message").innerHTML = mensageIn;
+            document.getElementById("timer").innerHTML = days + " dias " 
             + hours + " horas " + minutes + " minutos " + seconds + " segundos ";
                 if (t < 0) {
                     clearInterval(x);
@@ -347,13 +362,15 @@ darkMode.onclick = () => {
             }, 1000);
 
             function TerminarCultio() {
-                const lineUp = new Date("Nov 04, 2023 07:00:00").getTime();
+                const lineUp = new Date("Dec 22, 2023 12:00:00").getTime();
                 const y = setInterval(function() {
                     const now = new Date().getTime();
                     const time = lineUp - now;
                     if(time < 0){
                     clearInterval(y);
                     document.getElementById("timer").innerHTML = mensageOut;
+                    document.getElementById("title").innerHTML = null;
+                    document.getElementById("message").innerHTML = null;
                 }
                 },1000);
             } 

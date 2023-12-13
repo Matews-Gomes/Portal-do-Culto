@@ -20,7 +20,7 @@
 <body class="page">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./home.html">Portal do cultio</a>
+            <a class="navbar-brand" href="./index.html">Portal do cultio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,11 +31,14 @@
                         <a class="nav-link active" id="home" aria-current="page" href="#Home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" id="galeria" href="#Galeria">Galeria</a>
+                        <a class="nav-link " id="lovores" href="#Lovores">Músicas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" id="item-restrito">Restrito</a>
+                        <a class="nav-link " id="galeria" href="#Galeria">Galeria</a>
                     </li>
+                    <!--<li class="nav-item">
+                        <a class="nav-link " id="item-restrito" href="./restrito.html">Restrito</a>
+                    </li>-->
                 </ul>
                 <button class="btn btn-danger" type="button" onclick="sair()">Sair</button>
             </div>
@@ -43,9 +46,8 @@
     </nav>
 
     <main class="container py-4" id="Home">
-        <div class="jumbotron jumbotron-fluid">
-            <h1 class="display-3 dark-white text-center mt-4 pt-4">Visitantes Sejam Bem vindos!</h1>
-            <hr class="my-2">
+        <div class="jumbotron jumbotron-fluid pt-5">
+            <h1 class="display-3 dark-white text-center mt-4 pt-4 border-bottom">Vem lovando!</h1>
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -87,7 +89,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-            </div>
+</div>
             <hr class="my-2">
             <h1 class="display-4 dark-white text-center">Agrada-te nas prezença dos teus zirmãos</h1>      
             <p class="lead dark-white text-center">
@@ -95,16 +97,21 @@
                 marque em sua agendia o grande dia onde derrotaremos o malzo e engrandeceremos o olero para enchermos os pote dos azeite!
             </p>
             <hr class="my-2">
-            <h2 class="display-2 text-center my-2 py-2 dark-white">Contagem regresiva para o cultio</h2>
-            <h2 class="display-4 text-center my-2 py-2 dark-white"> Aguardem o Pastior está chegando...!</h2>
-            <div class="display-3 text-center text-danger mt-4" id="timer"></div>
+            <h2 class="display-4 text-center my-2 py-2 dark-white"> Aguardem o Pastior está chegando!</h2>
+            <hr class="my-4 dark-white">
+            <div class="px-4 py-5 text-center dark-white">
+                <h1 class="display-5 fw-bold text-body-emphasis" id="title"></h1>
+                <div class="col-lg-6 mx-auto">
+                    <p class="lead" id="message"></p>
+                </div>
+            </div>
+            <div class="display-3 text-center text-danger" id="timer"></div>
             <hr class="my-4 dark-white">
             <h2 class="display-3 dark-white text-center">Mais tocadas no cultio</h2>
-            <p class="lead dark-white text-center">
+            <p class="lead dark-white text-center" id="Lovores">
                 Escute os lovoures e corinhos de adoração que mais tocam no cultio!
             </p>
             <hr class="my-2">
-
             <!--****Player e lista de musicas****-->
             <div class="wrapper">
                 <div class="top-bar">
@@ -148,18 +155,16 @@
                         <i id="close" class='bx bx-x'></i>
                     </div>
                     <div class="music-list-container">
-                        <ul>
-                            <!-- Seus itens de música aqui -->
-                        </ul>
+                        <ul></ul>
                     </div>  
-                    <div class="lyrics-container" style="display: none;">
-                        <h2 id="music-title"><!--Titulo da Musica--></h2>
-                        <pre class="lyrics"><!--Letra da Musica--></pre>
-                        <button class="back-button mb-4" id="back-to-list">Voltar à Lista</button>
+                    <div class="lyrics-container">
+                        <h2 id="music-title"></h2>
+                        <pre class="lyrics"></pre>
+                        <a class="back-button btn btn-success mb-4" type="button" id="back-to-list">Voltar à Lista</a>
                     </div>                   
                 </div>                               
             </div>          
-            <hr class="my-4">
+            <hr class="my-4 dark-white">
             <h1 class="fw-light dark-white text-center">Galeria de fotos</h1>
             <section class="text-center container" id="Galeria">
                 <div class="row py-lg-5">
@@ -580,6 +585,7 @@
                 </article>
             </section>
         </div>
+        <hr class="my-4 dark-white">
     </main>
     <!-- Footer -->
     <footer class="text-muted py-5">

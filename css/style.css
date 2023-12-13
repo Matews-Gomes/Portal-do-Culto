@@ -247,17 +247,11 @@ body {
 }
 
 .show-lyrics {
-    background-color: #3498db;
-    color: #fff;
     border: none;
-    width: 100px;
+    width: 150px;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.show-lyrics:hover {
-    background-color: #2980b9;
 }
 
 .lyrics-container {
@@ -272,19 +266,13 @@ body {
 }
 
 .back-button {
-    background-color: #3498db;
-    color: #fff; 
+    text-decoration: none;
     padding: 5px 20px;
     border: none; 
     border-radius: 5px;
     cursor: pointer;
     float: right;
 }
-
-.back-button:hover {
-    background-color: #2980b9;
-}
-
 
 .header .row i {
     cursor: default;
